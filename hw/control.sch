@@ -1,0 +1,326 @@
+EESchema Schematic File Version 4
+LIBS:demo1-cache
+EELAYER 26 0
+EELAYER END
+$Descr User 8268 5827
+encoding utf-8
+Sheet 5 5
+Title "Control"
+Date "2018-04-05"
+Rev "1.0"
+Comp "wykys"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L demo1:ATmega328P-AU U1
+U 1 1 5AC54DDA
+P 1850 2550
+F 0 "U1" H 1850 700 50  0000 C CNN
+F 1 "ATmega328P-AU" H 1850 600 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2700 1050 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf" H 1850 2550 50  0001 C CNN
+	1    1850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:+5V #PWR02
+U 1 1 5AC54EA3
+P 1750 1050
+F 0 "#PWR02" H 1750 750 50  0001 C CNN
+F 1 "+5V" H 1755 1223 50  0000 C CNN
+F 2 "" H 1750 1050 50  0001 C CNN
+F 3 "" H 1750 1050 50  0001 C CNN
+	1    1750 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:+5V #PWR04
+U 1 1 5AC54EC5
+P 1950 1050
+F 0 "#PWR04" H 1950 750 50  0001 C CNN
+F 1 "+5V" H 1955 1223 50  0000 C CNN
+F 2 "" H 1950 1050 50  0001 C CNN
+F 3 "" H 1950 1050 50  0001 C CNN
+	1    1950 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:+5V #PWR01
+U 1 1 5AC54EEA
+P 900 1050
+F 0 "#PWR01" H 900 750 50  0001 C CNN
+F 1 "+5V" H 905 1223 50  0000 C CNN
+F 2 "" H 900 1050 50  0001 C CNN
+F 3 "" H 900 1050 50  0001 C CNN
+	1    900  1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1050 900  1950
+Wire Wire Line
+	900  1950 950  1950
+NoConn ~ 950  2750
+NoConn ~ 950  2850
+$Comp
+L KLIB_Power:GND #PWR03
+U 1 1 5AC553C4
+P 1850 4050
+F 0 "#PWR03" H 1850 3850 50  0001 C CNN
+F 1 "GND" H 1855 3877 50  0000 C CNN
+F 2 "" H 1850 4050 50  0001 C CNN
+F 3 "" H 1850 4050 50  0001 C CNN
+	1    1850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Specialized:AVR-ISP-10 J1
+U 1 1 5AC55537
+P 6650 1550
+F 0 "J1" H 6371 1646 50  0000 R CNN
+F 1 "AVR-ISP-10" H 6371 1555 50  0000 R CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" V 6400 1600 50  0001 C CNN
+F 3 "" H 5375 1000 50  0001 C CNN
+	1    6650 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1650 3250 1650
+Wire Wire Line
+	2750 1750 3250 1750
+Text Label 3250 1750 2    50   ~ 0
+MISO
+Text Label 3250 1650 2    50   ~ 0
+MOSI
+Text Label 3250 2850 2    50   ~ 0
+~RST
+Wire Wire Line
+	2750 1850 3250 1850
+Text Label 3250 1850 2    50   ~ 0
+SCK
+NoConn ~ 2750 1950
+NoConn ~ 2750 2050
+NoConn ~ 2750 1350
+NoConn ~ 2750 1450
+NoConn ~ 2750 1550
+Wire Wire Line
+	6250 1350 5950 1350
+Wire Wire Line
+	6250 1450 5950 1450
+Wire Wire Line
+	6250 1550 5950 1550
+Wire Wire Line
+	6250 1650 5950 1650
+Text Label 5950 1350 0    50   ~ 0
+MISO
+Text Label 5950 1450 0    50   ~ 0
+MOSI
+Text Label 5950 1550 0    50   ~ 0
+SCK
+Text Label 5950 1650 0    50   ~ 0
+~RST
+$Comp
+L KLIB_Power:+5V #PWR09
+U 1 1 5AC56776
+P 6750 1050
+F 0 "#PWR09" H 6750 750 50  0001 C CNN
+F 1 "+5V" H 6755 1223 50  0000 C CNN
+F 2 "" H 6750 1050 50  0001 C CNN
+F 3 "" H 6750 1050 50  0001 C CNN
+	1    6750 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:GND #PWR010
+U 1 1 5AC567A3
+P 6750 1950
+F 0 "#PWR010" H 6750 1750 50  0001 C CNN
+F 1 "GND" H 6755 1777 50  0000 C CNN
+F 2 "" H 6750 1950 50  0001 C CNN
+F 3 "" H 6750 1950 50  0001 C CNN
+	1    6750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2650 4550 2650
+Wire Wire Line
+	2750 2750 4900 2750
+Text Label 3650 2650 0    50   ~ 0
+SDA
+Text Label 3650 2750 0    50   ~ 0
+SCL
+$Comp
+L Device:R R1
+U 1 1 5AC57758
+P 4550 2400
+F 0 "R1" H 4620 2446 50  0000 L CNN
+F 1 "10k" H 4620 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4480 2400 50  0001 C CNN
+F 3 "~" H 4550 2400 50  0001 C CNN
+	1    4550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5AC57ADB
+P 4900 2400
+F 0 "R2" H 4970 2446 50  0000 L CNN
+F 1 "10k" H 4970 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4830 2400 50  0001 C CNN
+F 3 "~" H 4900 2400 50  0001 C CNN
+	1    4900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2550 4550 2650
+Connection ~ 4550 2650
+Wire Wire Line
+	4550 2650 5250 2650
+Wire Wire Line
+	4900 2550 4900 2750
+Connection ~ 4900 2750
+Wire Wire Line
+	4900 2750 5250 2750
+$Comp
+L KLIB_Power:+5V #PWR05
+U 1 1 5AC58201
+P 4550 2250
+F 0 "#PWR05" H 4550 1950 50  0001 C CNN
+F 1 "+5V" H 4555 2423 50  0000 C CNN
+F 2 "" H 4550 2250 50  0001 C CNN
+F 3 "" H 4550 2250 50  0001 C CNN
+	1    4550 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:+5V #PWR06
+U 1 1 5AC58227
+P 4900 2250
+F 0 "#PWR06" H 4900 1950 50  0001 C CNN
+F 1 "+5V" H 4905 2423 50  0000 C CNN
+F 2 "" H 4900 2250 50  0001 C CNN
+F 3 "" H 4900 2250 50  0001 C CNN
+	1    4900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2250 3250 2250
+Wire Wire Line
+	2750 2350 3250 2350
+Text Label 3150 2250 2    50   ~ 0
+RELAY1
+Text Label 3150 2350 2    50   ~ 0
+RELAY2
+$Comp
+L Device:C C1
+U 1 1 5AC5B2C5
+P 5800 3500
+F 0 "C1" H 5915 3546 50  0000 L CNN
+F 1 "100n" H 5915 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5838 3350 50  0001 C CNN
+F 3 "~" H 5800 3500 50  0001 C CNN
+	1    5800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5AC5B368
+P 6200 3500
+F 0 "C2" H 6315 3546 50  0000 L CNN
+F 1 "100n" H 6315 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6238 3350 50  0001 C CNN
+F 3 "~" H 6200 3500 50  0001 C CNN
+	1    6200 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3300 5800 3350
+Wire Wire Line
+	6200 3350 6200 3300
+Wire Wire Line
+	6200 3300 6000 3300
+Wire Wire Line
+	5800 3650 5800 3700
+Wire Wire Line
+	5800 3700 6000 3700
+Wire Wire Line
+	6200 3650 6200 3700
+$Comp
+L KLIB_Power:+5V #PWR07
+U 1 1 5AC5DF17
+P 6000 3250
+F 0 "#PWR07" H 6000 2950 50  0001 C CNN
+F 1 "+5V" H 6005 3423 50  0000 C CNN
+F 2 "" H 6000 3250 50  0001 C CNN
+F 3 "" H 6000 3250 50  0001 C CNN
+	1    6000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:GND #PWR08
+U 1 1 5AC5DFB2
+P 6000 3750
+F 0 "#PWR08" H 6000 3550 50  0001 C CNN
+F 1 "GND" H 6005 3577 50  0000 C CNN
+F 2 "" H 6000 3750 50  0001 C CNN
+F 3 "" H 6000 3750 50  0001 C CNN
+	1    6000 3750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2750 2550
+NoConn ~ 2750 2450
+NoConn ~ 2750 3050
+NoConn ~ 2750 3150
+NoConn ~ 2750 3250
+NoConn ~ 2750 3350
+NoConn ~ 2750 3450
+NoConn ~ 2750 3550
+NoConn ~ 2750 3650
+NoConn ~ 2750 3750
+Text HLabel 3250 2250 2    50   Output ~ 0
+RELAY1
+Text HLabel 3250 2350 2    50   Output ~ 0
+RELAY2
+Text HLabel 5250 2650 2    50   BiDi ~ 0
+SDA
+Text HLabel 5250 2750 2    50   Output ~ 0
+SCL
+$Comp
+L Device:R R5
+U 1 1 5AC72A90
+P 4200 2400
+F 0 "R5" H 4270 2446 50  0000 L CNN
+F 1 "10k" H 4270 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 2400 50  0001 C CNN
+F 3 "~" H 4200 2400 50  0001 C CNN
+	1    4200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2850 4200 2550
+Wire Wire Line
+	2750 2850 4200 2850
+$Comp
+L KLIB_Power:+5V #PWR028
+U 1 1 5AC7309E
+P 4200 2250
+F 0 "#PWR028" H 4200 1950 50  0001 C CNN
+F 1 "+5V" H 4205 2423 50  0000 C CNN
+F 2 "" H 4200 2250 50  0001 C CNN
+F 3 "" H 4200 2250 50  0001 C CNN
+	1    4200 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3250 6000 3300
+Connection ~ 6000 3300
+Wire Wire Line
+	6000 3300 5800 3300
+Wire Wire Line
+	6000 3750 6000 3700
+Connection ~ 6000 3700
+Wire Wire Line
+	6000 3700 6200 3700
+$EndSCHEMATC

@@ -1,0 +1,111 @@
+EESchema Schematic File Version 4
+LIBS:demo1-cache
+EELAYER 26 0
+EELAYER END
+$Descr User 8268 5827
+encoding utf-8
+Sheet 2 5
+Title "Temperature"
+Date "2018-04-05"
+Rev "1.0"
+Comp "wykys"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:LM75B U2
+U 1 1 5AC5FF45
+P 3900 2300
+F 0 "U2" H 3500 2900 50  0000 L CNN
+F 1 "LM75B" H 3500 2800 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3900 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm75b.pdf" H 3900 2300 50  0001 C CNN
+	1    3900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:GND #PWR012
+U 1 1 5AC5FFB4
+P 3900 2800
+F 0 "#PWR012" H 3900 2600 50  0001 C CNN
+F 1 "GND" H 3905 2627 50  0000 C CNN
+F 2 "" H 3900 2800 50  0001 C CNN
+F 3 "" H 3900 2800 50  0001 C CNN
+	1    3900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:+5V #PWR011
+U 1 1 5AC60045
+P 3900 1700
+F 0 "#PWR011" H 3900 1400 50  0001 C CNN
+F 1 "+5V" H 3905 1873 50  0000 C CNN
+F 2 "" H 3900 1700 50  0001 C CNN
+F 3 "" H 3900 1700 50  0001 C CNN
+	1    3900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L KLIB_Power:GND #PWR013
+U 1 1 5AC6025E
+P 4400 2800
+F 0 "#PWR013" H 4400 2600 50  0001 C CNN
+F 1 "GND" H 4405 2627 50  0000 C CNN
+F 2 "" H 4400 2800 50  0001 C CNN
+F 3 "" H 4400 2800 50  0001 C CNN
+	1    4400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2800 4400 2400
+Wire Wire Line
+	4400 2200 4300 2200
+Wire Wire Line
+	4300 2300 4400 2300
+Connection ~ 4400 2300
+Wire Wire Line
+	4400 2300 4400 2200
+Wire Wire Line
+	4300 2400 4400 2400
+Connection ~ 4400 2400
+Wire Wire Line
+	4400 2400 4400 2300
+Wire Wire Line
+	3500 2200 2750 2200
+Wire Wire Line
+	3500 2300 2750 2300
+Text Label 3100 2200 0    50   ~ 0
+SDA
+Text Label 3100 2300 0    50   ~ 0
+SCL
+Wire Wire Line
+	3900 1800 3900 1750
+$Comp
+L Device:C C5
+U 1 1 5AC605B3
+P 4400 1950
+F 0 "C5" H 4515 1996 50  0000 L CNN
+F 1 "100n" H 4515 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4438 1800 50  0001 C CNN
+F 3 "~" H 4400 1950 50  0001 C CNN
+	1    4400 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1800 4400 1750
+Wire Wire Line
+	4400 1750 3900 1750
+Connection ~ 3900 1750
+Wire Wire Line
+	3900 1750 3900 1700
+Wire Wire Line
+	4400 2100 4400 2200
+Connection ~ 4400 2200
+NoConn ~ 3500 2400
+Text HLabel 2750 2200 0    50   BiDi ~ 0
+SDA
+Text HLabel 2750 2300 0    50   Input ~ 0
+SCL
+$EndSCHEMATC
